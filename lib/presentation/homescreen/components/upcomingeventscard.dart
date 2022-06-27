@@ -16,7 +16,8 @@ class UpcomingEventsCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const IconAndTitle(icon: Icons.date_range_outlined, title: "Évènements à venir"),
+            const IconAndTitle(
+                icon: Icons.date_range_outlined, title: "Évènements à venir"),
             Padding(
               padding: EdgeInsets.only(top: kPadding),
               child: Column(
@@ -29,7 +30,12 @@ class UpcomingEventsCard extends StatelessWidget {
                   const SizedBox(height: 10),
                   Text(
                     "14 Novembre 2022",
-                    style: Theme.of(context).textTheme.headline6?.copyWith(fontWeight: FontWeight.bold),
+                    style: Theme.of(context)
+                        .textTheme
+                        .headline6
+                        ?.copyWith(fontWeight: FontWeight.bold),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                   ),
                 ],
               ),

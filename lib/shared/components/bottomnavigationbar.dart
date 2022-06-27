@@ -8,24 +8,34 @@ class CustomBottomNavigationBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: MediaQuery.of(context).size.height * 0.09,
+    return Container(
+      decoration: BoxDecoration(
+        color: kBgColor,
+        boxShadow: const [
+          BoxShadow(
+            color: Colors.black54,
+            offset: Offset(0, -10),
+            blurRadius: 90,
+          ),
+        ],
+      ),
+      height: MediaQuery.of(context).size.height * 0.1,
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 8.0),
+        padding: const EdgeInsets.only(top: 8.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             BottomNavigationBarButton(
               active: true,
               title: "Mission",
-              onTap: () {},
+              onTapped: () {},
               icon: Icons.adjust_outlined,
             ),
             BottomNavigationBarButton(
               title: "Résultats",
               icon: Icons.pie_chart,
               active: false,
-              onTap: () {},
+              onTapped: () {},
             ),
           ],
         ),
@@ -39,20 +49,20 @@ class BottomNavigationBarButton extends StatelessWidget {
     Key? key,
     required this.active,
     required this.title,
-    required this.onTap,
+    required this.onTapped,
     required this.icon,
   }) : super(key: key);
 
   final bool active;
   final String title;
-  final Function onTap;
+  final Function onTapped;
   final IconData icon;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       child: GestureDetector(
-        onTap: onTap(),
+        onTap: onTapped(),
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(

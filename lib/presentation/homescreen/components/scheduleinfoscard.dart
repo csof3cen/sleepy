@@ -14,8 +14,29 @@ class ScheduleInfosCard extends StatelessWidget {
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: const [
-              IconAndTitle(title: "Programmer", icon: Icons.alarm),
+            children: [
+              const Expanded(
+                flex: 2,
+                child: IconAndTitle(title: "Programmer", icon: Icons.alarm),
+              ),
+              const Spacer(),
+              Expanded(
+                flex: 1,
+                child: Row(
+                  children: const [
+                    Text(
+                      "Total : ",
+                      style: TextStyle(
+                        fontWeight: FontWeight.w900,
+                      ),
+                    ),
+                    Text(
+                      "6h",
+                      style: TextStyle(fontSize: 18),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
           Padding(
@@ -70,7 +91,8 @@ class ScheduleInfosCard extends StatelessWidget {
                 children: const [
                   TagIconWithText(title: "Tous les jours", icon: Icons.alarm),
                   SizedBox(width: 10),
-                  TagIconWithText(title: "Avec musique", icon: Icons.music_note),
+                  TagIconWithText(
+                      title: "Avec musique", icon: Icons.music_note),
                 ],
               ),
             ),

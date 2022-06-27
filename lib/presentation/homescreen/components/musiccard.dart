@@ -1,3 +1,4 @@
+import 'package:sleepy/config.dart';
 import 'package:sleepy/consts.dart';
 import 'package:flutter/material.dart';
 import 'package:sleepy/shared/components/card.dart';
@@ -43,7 +44,10 @@ class MusicCard extends StatelessWidget {
                       children: [
                         Text(
                           "Rainy in the midnight",
-                          style: Theme.of(context).textTheme.headline6?.copyWith(fontWeight: FontWeight.bold),
+                          style: Theme.of(context)
+                              .textTheme
+                              .headline6
+                              ?.copyWith(fontWeight: FontWeight.bold),
                           overflow: TextOverflow.ellipsis,
                           maxLines: 1,
                         ),
@@ -69,7 +73,10 @@ class MusicCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const TagIconWithText(title: "Répéter", icon: Icons.repeat),
-                  TextButton(onPressed: () {}, child: const Text("Changer"))
+                  TextButton(
+                      onPressed: () => Navigator.of(context)
+                          .pushNamed(selectSleepMusicRoute),
+                      child: const Text("Changer"))
                 ],
               ),
             ),
