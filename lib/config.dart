@@ -2,15 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sleepy/presentation/homescreen/homescreen.dart';
 import 'package:sleepy/presentation/selectsleepmusicscreen/selectsleepmusic.dart';
+import 'package:sleepy/presentation/selecttimescreen/selecttimescreen.dart';
 import 'consts.dart';
 
 // Named Routes
 const homeScreenRoute = '/';
 const selectSleepMusicRoute = '/selectsleepmusic';
+const selectTimeRoute = '/selecttime';
 
 Map<String, Widget Function(BuildContext)> appRoutes = {
   homeScreenRoute: (context) => const HomeScreen(),
   selectSleepMusicRoute: (context) => const SelectSleepMusicScreen(),
+  selectTimeRoute: (context) => const SelectTimeScreen(),
 };
 
 ThemeData appTheme(BuildContext context) {
@@ -29,7 +32,7 @@ ThemeData appTheme(BuildContext context) {
           .textTheme
           .headline6
           ?.copyWith(fontFamily: GoogleFonts.josefinSans().fontFamily),
-      padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 17),
+      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
     )),
   );

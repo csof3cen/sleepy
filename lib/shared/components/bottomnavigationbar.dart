@@ -19,7 +19,7 @@ class CustomBottomNavigationBar extends StatelessWidget {
           ),
         ],
       ),
-      height: MediaQuery.of(context).size.height * 0.1,
+      height: MediaQuery.of(context).size.height * 0.13,
       child: Padding(
         padding: const EdgeInsets.only(top: 8.0),
         child: Row(

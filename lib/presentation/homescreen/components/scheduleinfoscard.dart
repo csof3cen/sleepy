@@ -1,12 +1,18 @@
+import 'package:sleepy/config.dart';
 import 'package:sleepy/consts.dart';
 import 'package:flutter/material.dart';
 import 'package:sleepy/shared/components/card.dart';
 import 'package:sleepy/shared/components/iconandtitle.dart';
 import 'package:sleepy/shared/components/tagiconwithtext.dart';
 
-class ScheduleInfosCard extends StatelessWidget {
+class ScheduleInfosCard extends StatefulWidget {
   const ScheduleInfosCard({Key? key}) : super(key: key);
 
+  @override
+  State<ScheduleInfosCard> createState() => _ScheduleInfosCardState();
+}
+
+class _ScheduleInfosCardState extends State<ScheduleInfosCard> {
   @override
   Widget build(BuildContext context) {
     return CustomCard(
@@ -16,12 +22,12 @@ class ScheduleInfosCard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               const Expanded(
-                flex: 2,
+                flex: 10,
                 child: IconAndTitle(title: "Programmer", icon: Icons.alarm),
               ),
               const Spacer(),
               Expanded(
-                flex: 1,
+                flex: 4,
                 child: Row(
                   children: const [
                     Text(
@@ -54,11 +60,14 @@ class ScheduleInfosCard extends StatelessWidget {
                       style: TextStyle(color: kGray, fontSize: 17),
                     ),
                     const SizedBox(height: 15),
-                    Text(
-                      "23:OO",
-                      style: TextStyle(
-                        fontSize: MediaQuery.of(context).size.width * 0.1,
-                        fontWeight: FontWeight.bold,
+                    Hero(
+                      tag: "sleeptime",
+                      child: Text(
+                        "22:OO",
+                        style: TextStyle(
+                          fontSize: MediaQuery.of(context).size.width * 0.1,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     )
                   ],
@@ -71,11 +80,14 @@ class ScheduleInfosCard extends StatelessWidget {
                       style: TextStyle(color: kGray, fontSize: 17),
                     ),
                     const SizedBox(height: 15),
-                    Text(
-                      "05:OO",
-                      style: TextStyle(
-                        fontSize: MediaQuery.of(context).size.width * 0.1,
-                        fontWeight: FontWeight.bold,
+                    Hero(
+                      tag: "uptime",
+                      child: Text(
+                        "05:OO",
+                        style: TextStyle(
+                          fontSize: MediaQuery.of(context).size.width * 0.1,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     )
                   ],
@@ -91,8 +103,7 @@ class ScheduleInfosCard extends StatelessWidget {
                 children: const [
                   TagIconWithText(title: "Tous les jours", icon: Icons.alarm),
                   SizedBox(width: 10),
-                  TagIconWithText(
-                      title: "Avec musique", icon: Icons.music_note),
+                  TagIconWithText(title: "Avec musique", icon: Icons.music_note),
                 ],
               ),
             ),
@@ -100,7 +111,9 @@ class ScheduleInfosCard extends StatelessWidget {
           Padding(
             padding: EdgeInsets.only(top: kPadding),
             child: TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, selectTimeRoute);
+              },
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: const [
