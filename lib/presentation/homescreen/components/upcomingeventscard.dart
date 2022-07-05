@@ -11,7 +11,7 @@ class UpcomingEventsCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(top: kPadding),
+      padding: EdgeInsets.only(top: kPadding, bottom: 20),
       child: CustomCard(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -42,7 +42,7 @@ class UpcomingEventsCard extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.only(top: kPadding),
-              child: TextButton(
+              child: ElevatedButton(
                 onPressed: () {},
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,

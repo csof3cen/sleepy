@@ -12,6 +12,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return const ScaffoldConfig(
       showBottomNavigationBar: true,
+      showAppBar: true,
       children: [
         ScreenTitle(),
         ScheduleInfosCard(),

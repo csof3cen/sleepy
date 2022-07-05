@@ -43,38 +43,42 @@ class _SelectTimeScreenState extends State<SelectTimeScreen> {
   Widget build(BuildContext context) {
     return ScaffoldConfig(
       children: [
-        Row(
-          children: [
-            IconButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              icon: const Icon(Icons.arrow_back),
-            )
-          ],
+        IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: const Icon(Icons.arrow_back),
+          tooltip: 'Retour',
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Row(
               children: [
-                const Text('Se coucher : '),
-                Hero(
-                  tag: "sleeptime",
-                  child: Text(
-                    sprintf(
-                      "%02i:%02i",
-                      [selectedSleepTime.hour, selectedSleepTime.minute],
-                    ),
+                Text(
+                  'Se coucher à ',
+                  style: Theme.of(context).textTheme.headline6,
+                ),
+                Text(
+                  sprintf(
+                    "%02i:%02i",
+                    [selectedSleepTime.hour, selectedSleepTime.minute],
                   ),
+                  style: Theme.of(context).textTheme.headline6,
                 ),
               ],
             ),
-            TextButton(
+            ElevatedButton(
               onPressed: () {
                 selectSleepTime(context);
               },
-              child: const Text("Changer"),
+              child: const Text(
+                "Changer",
+                style: TextStyle(
+                  fontSize: 13,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ),
           ],
         ),
@@ -83,23 +87,30 @@ class _SelectTimeScreenState extends State<SelectTimeScreen> {
           children: [
             Row(
               children: [
-                const Text('Se Lever : '),
-                Hero(
-                  tag: "uptime",
-                  child: Text(
-                    sprintf(
-                      "%02i:%02i",
-                      [selectedGetupTime.hour, selectedGetupTime.minute],
-                    ),
+                Text(
+                  'Se Lever à ',
+                  style: Theme.of(context).textTheme.headline6,
+                ),
+                Text(
+                  sprintf(
+                    "%02i:%02i",
+                    [selectedGetupTime.hour, selectedGetupTime.minute],
                   ),
+                  style: Theme.of(context).textTheme.headline6,
                 ),
               ],
             ),
-            TextButton(
+            ElevatedButton(
               onPressed: () {
                 selectGetupTime(context);
               },
-              child: const Text("Changer"),
+              child: const Text(
+                "Changer",
+                style: TextStyle(
+                  fontSize: 13,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ),
           ],
         )

@@ -24,7 +24,7 @@ ThemeData appTheme(BuildContext context) {
       displayColor: Colors.white,
       bodyColor: Colors.white,
     ),
-    textButtonTheme: TextButtonThemeData(
+    elevatedButtonTheme: ElevatedButtonThemeData(
         style: TextButton.styleFrom(
       primary: kBgColor,
       backgroundColor: kFgColor,
@@ -32,7 +32,7 @@ ThemeData appTheme(BuildContext context) {
           .textTheme
           .headline6
           ?.copyWith(fontFamily: GoogleFonts.josefinSans().fontFamily),
-      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+      // padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
     )),
   );

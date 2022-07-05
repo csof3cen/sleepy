@@ -49,7 +49,10 @@ class MusicCard extends StatelessWidget {
                         children: [
                           Text(
                             "Rainy in the midnight",
-                            style: Theme.of(context).textTheme.headline6?.copyWith(fontWeight: FontWeight.bold),
+                            style: Theme.of(context)
+                                .textTheme
+                                .headline6
+                                ?.copyWith(fontWeight: FontWeight.bold),
                             overflow: TextOverflow.ellipsis,
                             maxLines: 1,
                           ),
@@ -76,8 +79,9 @@ class MusicCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const TagIconWithText(title: "Répéter", icon: Icons.repeat),
-                  TextButton(
-                      onPressed: () => Navigator.of(context).pushNamed(selectSleepMusicRoute),
+                  ElevatedButton(
+                      onPressed: () => Navigator.of(context)
+                          .pushNamed(selectSleepMusicRoute),
                       child: const Text("Changer"))
                 ],
               ),

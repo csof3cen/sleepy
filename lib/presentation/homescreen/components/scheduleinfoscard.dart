@@ -60,14 +60,11 @@ class _ScheduleInfosCardState extends State<ScheduleInfosCard> {
                       style: TextStyle(color: kGray, fontSize: 17),
                     ),
                     const SizedBox(height: 15),
-                    Hero(
-                      tag: "sleeptime",
-                      child: Text(
-                        "22:OO",
-                        style: TextStyle(
-                          fontSize: MediaQuery.of(context).size.width * 0.1,
-                          fontWeight: FontWeight.bold,
-                        ),
+                    Text(
+                      "22:OO",
+                      style: TextStyle(
+                        fontSize: MediaQuery.of(context).size.width * 0.1,
+                        fontWeight: FontWeight.bold,
                       ),
                     )
                   ],
@@ -80,14 +77,11 @@ class _ScheduleInfosCardState extends State<ScheduleInfosCard> {
                       style: TextStyle(color: kGray, fontSize: 17),
                     ),
                     const SizedBox(height: 15),
-                    Hero(
-                      tag: "uptime",
-                      child: Text(
-                        "05:OO",
-                        style: TextStyle(
-                          fontSize: MediaQuery.of(context).size.width * 0.1,
-                          fontWeight: FontWeight.bold,
-                        ),
+                    Text(
+                      "05:OO",
+                      style: TextStyle(
+                        fontSize: MediaQuery.of(context).size.width * 0.1,
+                        fontWeight: FontWeight.bold,
                       ),
                     )
                   ],
@@ -103,14 +97,15 @@ class _ScheduleInfosCardState extends State<ScheduleInfosCard> {
                 children: const [
                   TagIconWithText(title: "Tous les jours", icon: Icons.alarm),
                   SizedBox(width: 10),
-                  TagIconWithText(title: "Avec musique", icon: Icons.music_note),
+                  TagIconWithText(
+                      title: "Avec musique", icon: Icons.music_note),
                 ],
               ),
             ),
           ),
           Padding(
             padding: EdgeInsets.only(top: kPadding),
-            child: TextButton(
+            child: ElevatedButton(
               onPressed: () {
                 Navigator.pushNamed(context, selectTimeRoute);
               },
