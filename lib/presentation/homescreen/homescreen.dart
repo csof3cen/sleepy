@@ -1,3 +1,5 @@
+import 'package:flutter/cupertino.dart';
+
 import 'components/musiccard.dart';
 import 'components/screentitle.dart';
 import 'package:flutter/material.dart';

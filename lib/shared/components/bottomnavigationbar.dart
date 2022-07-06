@@ -22,13 +22,13 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
           icon: Icon(CupertinoIcons.home),
         ),
         BottomNavigationBarItem(
-          label: 'Résultats',
+          label: 'Statistiques',
           icon: Icon(CupertinoIcons.chart_bar_fill),
         ),
         BottomNavigationBarItem(
           label: 'Paramètres',
           icon: Icon(CupertinoIcons.settings),
-        )
+        ),
       ],
     );
   }

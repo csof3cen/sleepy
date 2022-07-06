@@ -1,5 +1,6 @@
 import 'package:sleepy/consts.dart';
 import 'package:flutter/material.dart';
+import 'package:sleepy/shared/components/appdrawer.dart';
 import 'package:sleepy/shared/components/bottomnavigationbar.dart';
 
 class ScaffoldConfig extends StatelessWidget {
@@ -33,24 +34,7 @@ class ScaffoldConfig extends StatelessWidget {
               centerTitle: true,
             )
           : null,
-      drawer: showAppBar
-          ? Drawer(
-              backgroundColor: kBgColor.withBlue(50),
-              child: Column(
-                children: [
-                  DrawerHeader(
-                    child: Container(
-                      height: 300,
-                      decoration: BoxDecoration(
-                        color: Colors.red,
-                        borderRadius: BorderRadius.circular(30),
-                      ),
-                    ),
-                  )
-                ],
-              ),
-            )
-          : null,
+      drawer: showAppBar ? const AppDrawer() : null,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
