@@ -24,9 +24,9 @@ class ScaffoldConfig extends StatelessWidget {
       appBar: showAppBar
           ? AppBar(
               backgroundColor: kBgColor.withBlue(255),
-              title: const Text(
-                "Sleepy",
-                style: TextStyle(
+              title: Text(
+                appName,
+                style: const TextStyle(
                   fontWeight: FontWeight.bold,
                   letterSpacing: 1.5,
                 ),

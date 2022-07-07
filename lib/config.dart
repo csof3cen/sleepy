@@ -33,7 +33,8 @@ ThemeData appTheme(BuildContext context) {
           .headline6
           ?.copyWith(fontFamily: GoogleFonts.josefinSans().fontFamily),
       // padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+      shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(kButtonsCornerRadius)),
     )),
   );
 }

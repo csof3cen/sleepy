@@ -12,3 +12,9 @@ Color kShadowBg = const Color(0XFF131D2A);
 // Sizes
 double kPadding = 20;
 double ktitledFontSize = 19;
+double kButtonsCornerRadius = 15;
+
+// Strings
+String appName = "Sleepy";
+String appDescription =
+    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni.";
