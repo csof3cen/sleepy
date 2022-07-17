@@ -18,29 +18,31 @@ class AppDrawer extends StatelessWidget {
                 Container(
                   margin: const EdgeInsets.only(top: 10),
                   width: 1000,
-                  child: Wrap(
-                    children: [
-                      Text(
-                        appName,
-                        style: Theme.of(context).textTheme.headline5,
-                      ),
-                      Container(
-                        margin: const EdgeInsets.only(top: 5),
-                        child: const Text(
-                          "Par Serigne Moustapha Sy Ndoye",
-                          maxLines: 2,
-                          overflow: TextOverflow.ellipsis,
+                  child: SingleChildScrollView(
+                    child: Wrap(
+                      children: [
+                        Text(
+                          appName,
+                          style: Theme.of(context).textTheme.headline5,
                         ),
-                      ),
-                      Container(
-                        margin: const EdgeInsets.only(top: 20),
-                        child: Text(
-                          appDescription,
-                          maxLines: 4,
-                          overflow: TextOverflow.ellipsis,
+                        Container(
+                          margin: const EdgeInsets.only(top: 5),
+                          child: const Text(
+                            "Par Serigne Moustapha Sy Ndoye",
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                          ),
                         ),
-                      ),
-                    ],
+                        Container(
+                          margin: const EdgeInsets.only(top: 20),
+                          child: Text(
+                            appDescription,
+                            maxLines: 4,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],
@@ -57,15 +59,15 @@ class AppDrawer extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                ElevatedButton(
+                TextButton(
                   onPressed: () {},
                   child: const Text("À propos"),
                 ),
-                ElevatedButton(
+                TextButton(
                   onPressed: () {},
                   child: const Text("Nous Contacter"),
                 ),
-                ElevatedButton(
+                TextButton(
                   onPressed: () {},
                   child: const Text("Laisser un feedback"),
                 ),
@@ -75,18 +77,11 @@ class AppDrawer extends StatelessWidget {
                   child: TextButton(
                     style: TextButton.styleFrom(
                       backgroundColor: Colors.red,
-                      shape: RoundedRectangleBorder(
-                        borderRadius:
-                            BorderRadius.circular(kButtonsCornerRadius),
-                      ),
                     ),
                     onPressed: () {},
                     child: Text(
                       "Se déconnecter",
-                      style: Theme.of(context)
-                          .textTheme
-                          .headline6
-                          ?.copyWith(color: Colors.white),
+                      style: Theme.of(context).textTheme.headline6?.copyWith(color: Colors.white),
                     ),
                   ),
                 ),

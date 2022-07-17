@@ -42,6 +42,7 @@ class _SelectTimeScreenState extends State<SelectTimeScreen> {
   @override
   Widget build(BuildContext context) {
     return ScaffoldConfig(
+      index: 9,
       children: [
         IconButton(
           onPressed: () {

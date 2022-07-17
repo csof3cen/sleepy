@@ -8,6 +8,7 @@ class SelectSleepMusicScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScaffoldConfig(
+      index: 9,
       children: [
         GestureDetector(
           onTap: () => Navigator.pop(context),
@@ -17,14 +18,10 @@ class SelectSleepMusicScreen extends StatelessWidget {
           ),
         ),
         Container(
-          margin: EdgeInsets.symmetric(
-              vertical: MediaQuery.of(context).size.height * 0.06),
+          margin: EdgeInsets.symmetric(vertical: MediaQuery.of(context).size.height * 0.06),
           child: Text(
             "Musique de sommeil",
-            style: Theme.of(context)
-                .textTheme
-                .headline6
-                ?.copyWith(fontWeight: FontWeight.bold),
+            style: Theme.of(context).textTheme.headline6?.copyWith(fontWeight: FontWeight.bold),
           ),
         ),
         Divider(color: kGray),

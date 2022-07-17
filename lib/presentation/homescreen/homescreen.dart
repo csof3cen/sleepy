@@ -13,6 +13,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const ScaffoldConfig(
+      index: 0,
       showBottomNavigationBar: true,
       showAppBar: true,
       children: [

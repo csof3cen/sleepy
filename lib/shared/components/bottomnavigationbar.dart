@@ -1,21 +1,41 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sleepy/consts.dart';
+import 'package:sleepy/config.dart';
 
 class CustomBottomNavigationBar extends StatefulWidget {
-  const CustomBottomNavigationBar({Key? key}) : super(key: key);
+  int index;
+
+  CustomBottomNavigationBar(this.index, {Key? key}) : super(key: key);
 
   @override
-  State<CustomBottomNavigationBar> createState() =>
-      _CustomBottomNavigationBarState();
+  State<CustomBottomNavigationBar> createState() => _CustomBottomNavigationBarState(this.index);
 }
 
 class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
+  _CustomBottomNavigationBarState(this.index);
+  int index;
+
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
-      backgroundColor: kBgColor,
+      backgroundColor: kCardColor,
+      currentIndex: index,
+      selectedItemColor: kPrimaryColor,
       elevation: 10,
+      onTap: (int i) {
+        setState(() {
+          index = i;
+          Navigator.pushReplacement(
+            context,
+            PageRouteBuilder(
+              pageBuilder: (context, animation, secondaryAnimation) => bottomNavigationBarItems[i],
+              transitionDuration: Duration.zero,
+              reverseTransitionDuration: Duration.zero,
+            ),
+          );
+        });
+      },
       items: const [
         BottomNavigationBarItem(
           label: 'Mission',

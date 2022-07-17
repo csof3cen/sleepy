@@ -15,14 +15,14 @@ class TagIconWithText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        border: Border.all(color: kFgColor.withOpacity(0.5)),
+        border: Border.all(color: kPrimaryColor.withOpacity(0.5)),
         borderRadius: BorderRadius.circular(20),
       ),
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 7, horizontal: 14),
         child: Row(
           children: [
-            Icon(icon, color: kFgColor),
+            Icon(icon, color: kPrimaryColor),
             Padding(
               padding: const EdgeInsets.only(left: 10),
               child: Text(

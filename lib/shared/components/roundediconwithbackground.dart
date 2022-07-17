@@ -15,7 +15,7 @@ class RoundedIconWithBackground extends StatelessWidget {
       margin: const EdgeInsets.only(right: 10),
       padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
-        color: kFgColor,
+        color: kPrimaryColor,
         borderRadius: BorderRadius.circular(20),
       ),
       child: Icon(
